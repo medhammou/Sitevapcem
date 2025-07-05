@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "technology": "تكنولوجيا الذكاء الاصطناعي",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+    "memberArea": "منطقة الأعضاء"
+  },
+  "hero": {
+    "title": "حلول احترافية لمكافحة الآفات",
+    "subtitle": "نحن نجمع بين الخبرة التقنية والتقنيات المتقدمة لتقديم حلول فعالة ومستدامة ضد جميع أنواع الآفات.",
+    "servicePlaceholder": "اختر خدمة",
+    "namePlaceholder": "اسمك",
+    "emailPlaceholder": "بريدك الإلكتروني",
+    "phonePlaceholder": "هاتفك",
+    "messagePlaceholder": "رسالتك (اختياري)",
+    "quoteButton": "طلب عرض سعر"
+  },
+  "services": {
+    "title": "خدماتنا",
+    "subtitle": "حلول شاملة ومبتكرة لمكافحة الآفات، مصممة خصيصًا لتلبية احتياجاتك.",
+    "technicalSupport": "الدعم الفني",
+    "fieldExpertise": "الخبرة الميدانية",
+    "training": "تدريب متخصص",
+    "automation": "الأتمتة بالذكاء الاصطناعي",
+    "learnMore": "معرفة المزيد"
+  },
+  "direction": "rtl"
+}

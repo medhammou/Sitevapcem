@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de Bord - Vector & Pest Control - v13 FINAL TEST</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">VAPCEM</div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="#dashboard"
+                ><i class="fas fa-home"></i> Tableau de bord</a
+              >
+            </li>
+            <li>
+              <a href="#interventions"
+                ><i class="fas fa-calendar-check"></i> Interventions</a
+              >
+            </li>
+            <li>
+              <a href="#clients"><i class="fas fa-users"></i> Clients</a>
+            </li>
+            <li>
+              <a href="#stock"><i class="fas fa-boxes"></i> Stock produits</a>
+            </li>
+            <li>
+              <a href="#reports"><i class="fas fa-chart-bar"></i> Rapports</a>
+            </li>
+            <li>
+              <a href="#settings"><i class="fas fa-cog"></i> Paramètres</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="top-bar">
+          <div class="user-profile">
+            <img src="/images/avatar.jpg" alt="Profile" class="avatar" />
+            <span>Admin</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </header>
+
+        <div class="content">
+          <!-- Dashboard Overview -->
+          <section id="dashboard" class="dashboard-section">
+            <h2>Tableau de Bord</h2>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <h3>Interventions ce mois</h3>
+                <p class="stat-value">24</p>
+              </div>
+              <div class="stat-card">
+                <h3>Clients actifs</h3>
+                <p class="stat-value">15</p>
+              </div>
+              <div class="stat-card">
+                <h3>Produits en stock</h3>
+                <p class="stat-value">42</p>
+              </div>
+            </div>
+
+            <div class="recent-activity">
+              <h3>Activité récente</h3>
+              <ul class="activity-list">
+                <!-- Dynamically populated from JS -->
+              </ul>
+            </div>
+          </section>
+
+          <!-- Interventions Section -->
+          <section
+            id="interventions"
+            class="dashboard-section"
+            style="display: none"
+          >
+            <h2>Gestion des Interventions</h2>
+            <div class="interventions-container">
+              <div class="intervention-filters">
+                <select id="intervention-status">
+                  <option value="all">Toutes les interventions</option>
+                  <option value="planned">Planifiées</option>
+                  <option value="completed">Terminées</option>
+                  <option value="cancelled">Annulées</option>
+                </select>
+                <input type="date" id="intervention-date" />
+                <button id="filter-interventions" class="btn-primary">
+                  Filtrer
+                </button>
+                <button id="new-intervention" class="btn-secondary">
+                  + Nouvelle intervention
+                </button>
+              </div>
+
+              <div class="interventions-list">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Client</th>
+                      <th>Adresse</th>
+                      <th>Type</th>
+                      <th>Statut</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="interventions-table-body">
+                    <!-- Will be populated by JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Clients Section -->
+          <section id="clients" class="dashboard-section" style="display: none">
+            <h2>Gestion des Clients</h2>
+            <div class="content-placeholder">Section en développement</div>
+          </section>
+
+          <!-- Stock Section -->
+          <section id="stock" class="dashboard-section" style="display: none">
+            <h2>Gestion du Stock</h2>
+            <div class="content-placeholder">Section en développement</div>
+          </section>
+
+          <!-- Reports Section -->
+          <section id="reports" class="dashboard-section" style="display: none">
+            <h2>Rapports</h2>
+            <div class="content-placeholder">Section en développement</div>
+          </section>
+
+          <!-- Settings Section -->
+          <section
+            id="settings"
+            class="dashboard-section"
+            style="display: none"
+          >
+            <h2>Paramètres</h2>
+            <div class="content-placeholder">Section en développement</div>
+          </section>
+
+          <!-- AI Identification Section -->
+          <section id="ai-identification" class="dashboard-section">
+            <h2>Identification des nuisibles par IA</h2>
+            <div class="ai-container">
+              <div class="ai-upload">
+                <h3>Uploader une photo</h3>
+                <input
+                  type="file"
+                  id="pest-image"
+                  accept="image/*"
+                  capture="environment"
+                />
+                <div class="image-preview" id="image-preview"></div>
+                <button id="analyze-btn" class="btn-primary">Analyser</button>
+              </div>
+              <div class="ai-results" id="ai-results">
+                <!-- Results will be populated by JavaScript -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="/js/membre-v3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "services": "Servicios",
+    "technology": "Tecnología IA",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "memberArea": "Área de miembros"
+  },
+  "hero": {
+    "title": "Soluciones profesionales de control de plagas",
+    "subtitle": "Combinamos experiencia técnica y tecnologías avanzadas para ofrecer soluciones efectivas y sostenibles contra todo tipo de plagas.",
+    "servicePlaceholder": "Elija un servicio",
+    "namePlaceholder": "Su nombre",
+    "emailPlaceholder": "Su correo electrónico",
+    "phonePlaceholder": "Su teléfono",
+    "messagePlaceholder": "Su mensaje (opcional)",
+    "quoteButton": "Solicitar presupuesto"
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "subtitle": "Soluciones completas e innovadoras para el control de plagas, adaptadas a sus necesidades específicas.",
+    "technicalSupport": "Asistencia técnica",
+    "fieldExpertise": "Experiencia en campo",
+    "training": "Formación especializada",
+    "automation": "Automatización con IA",
+    "learnMore": "Saber más"
+  }
+}

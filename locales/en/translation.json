@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "technology": "AI Technology",
+    "blog": "Blog",
+    "contact": "Contact",
+    "memberArea": "Member Area"
+  },
+  "hero": {
+    "title": "Professional Pest Control Solutions",
+    "subtitle": "We combine technical expertise and advanced technologies to provide effective and sustainable solutions against all types of pests.",
+    "servicePlaceholder": "Choose a service",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "phonePlaceholder": "Your phone",
+    "messagePlaceholder": "Your message (optional)",
+    "quoteButton": "Request a quote"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete and innovative pest control solutions, tailored to your specific needs.",
+    "technicalSupport": "Technical support",
+    "fieldExpertise": "Field expertise",
+    "training": "Specialized training",
+    "automation": "AI Automation",
+    "learnMore": "Learn more"
+  }
+}

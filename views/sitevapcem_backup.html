@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector & Pest Control - Solutions Professionnelles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#0f766e", secondary: "#0284c7" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hero-section {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.9) 40%,
+            rgba(255, 255, 255, 0.6) 60%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          url("https://readdy.ai/api/search-image?query=A%20professional%20pest%20control%20technician%20in%20uniform%20inspecting%20a%20modern%20building%20exterior%20with%20advanced%20equipment.%20The%20image%20shows%20a%20clean%2C%20bright%20environment%20with%20subtle%20pest%20control%20elements.%20The%20left%20side%20has%20a%20clean%20white%20gradient%20background%20that%20smoothly%20transitions%20to%20the%20right%20side%20showing%20the%20technician%20at%20work.%20High-quality%20professional%20corporate%20style.&width=1200&height=600&seq=1&orientation=landscape");
+        background-size: cover;
+        background-position: center right;
+      }
+      .language-selector:hover .language-dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <h1 class="text-2xl font-['Pacifico'] text-primary mr-8">logo</h1>
+          <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-primary font-medium">Accueil</a>
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >À propos</a
+            >
+            <a
+              href="#services"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Services</a
+            >
+            <a
+              href="#technology"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Technologie IA</a
+            >
+            <a
+              href="blog.html"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a
+            href="membre.html"
+            class="bg-primary text-white px-4 py-2 rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+            >Espace Membre</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section w-full py-20">
+      <div class="container mx-auto px-4">
+        <div class="w-full max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Solutions professionnelles de contrôle des nuisibles
+          </h1>
+          <p class="text-lg text-gray-700 mb-8">
+            Nous combinons expertise technique et technologies avancées pour
+            offrir des solutions efficaces et durables contre tous types de
+            nuisibles.
+          </p>
+          <form id="quote-form" class="space-y-4 mt-8">
+            <select
+              name="service"
+              required
+              class="w-full px-4 py-3 rounded-button border border-gray-300 focus:ring-primary focus:border-primary"
+            >
+              <option value="" disabled selected>Choisissez un service</option>
+              <option value="Assistance technique">Assistance technique</option>
+              <option value="Expertise terrain">Expertise terrain</option>
+              <option value="Formation spécialisée">
+                Formation spécialisée
+              </option>
+              <option value="Automatisation IA">Automatisation IA</option>
+            </select>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Votre nom"
+                required
+                class="px-4 py-3 rounded-button border border-gray-300 focus:ring-primary focus:border-primary"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Votre email"
+                required
+                class="px-4 py-3 rounded-button border border-gray-300 focus:ring-primary focus:border-primary"
+              />
+            </div>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Votre téléphone"
+              required
+              class="w-full px-4 py-3 rounded-button border border-gray-300 focus:ring-primary focus:border-primary"
+            />
+            <textarea
+              name="message"
+              placeholder="Votre message (optionnel)"
+              rows="4"
+              class="w-full px-4 py-3 rounded-button border border-gray-300 focus:ring-primary focus:border-primary"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap text-center hover:bg-primary/90 transition-colors w-full"
+            >
+              Demander un devis
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Services</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Des solutions complètes et innovantes pour le contrôle des
+            nuisibles, adaptées à vos besoins spécifiques.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <span
+                class="w-8 h-8 flex items-center justify-center text-primary"
+                ><i class="ri-customer-service-2-line ri-2x"></i
+              ></span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">
+              Assistance technique
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Support expert pour l'identification et le traitement des
+              problèmes de nuisibles dans tous types d'environnements.
+            </p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              En savoir plus
+              <span class="w-5 h-5 flex items-center justify-center ml-1"
+                ><i class="ri-arrow-right-line"></i
+              ></span>
+            </a>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <span
+                class="w-8 h-8 flex items-center justify-center text-primary"
+                ><i class="ri-map-pin-line ri-2x"></i
+              ></span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">
+              Expertise terrain
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Interventions sur site par nos techniciens certifiés pour des
+              diagnostics précis et des traitements efficaces.
+            </p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              En savoir plus
+              <span class="w-5 h-5 flex items-center justify-center ml-1"
+                ><i class="ri-arrow-right-line"></i
+              ></span>
+            </a>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <span
+                class="w-8 h-8 flex items-center justify-center text-primary"
+                ><i class="ri-graduation-cap-line ri-2x"></i
+              ></span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">
+              Formation spécialisée
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Programmes de formation adaptés pour les professionnels et les
+              équipes de maintenance des établissements.
+            </p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              En savoir plus
+              <span class="w-5 h-5 flex items-center justify-center ml-1"
+                ><i class="ri-arrow-right-line"></i
+              ></span>
+            </a>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <span
+                class="w-8 h-8 flex items-center justify-center text-primary"
+                ><i class="ri-robot-line ri-2x"></i
+              ></span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">
+              Automatisation IA
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Solutions de surveillance, détection et reporting automatisées
+              grâce à notre technologie d'intelligence artificielle.
+            </p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              En savoir plus
+              <span class="w-5 h-5 flex items-center justify-center ml-1"
+                ><i class="ri-arrow-right-line"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technology Section -->
+    <section id="technology" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Technologie IA avancée pour le contrôle des nuisibles
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Notre approche révolutionnaire intègre l'intelligence artificielle
+              dans chaque aspect de nos services, offrant une précision et une
+              efficacité inégalées.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start">
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-2"
+                  ><i class="ri-check-line"></i
+                ></span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">
+                    Détection automatique par caméra
+                  </h4>
+                  <p class="text-gray-600">
+                    Identification précise des espèces de nuisibles grâce à
+                    notre système de reconnaissance visuelle.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-2"
+                  ><i class="ri-check-line"></i
+                ></span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">
+                    Surveillance continue
+                  </h4>
+                  <p class="text-gray-600">
+                    Monitoring 24/7 avec alertes en temps réel pour une
+                    intervention rapide et ciblée.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-2"
+                  ><i class="ri-check-line"></i
+                ></span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">
+                    Analyse prédictive
+                  </h4>
+                  <p class="text-gray-600">
+                    Anticipation des risques d'infestation basée sur les données
+                    environnementales et historiques.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap inline-block hover:bg-primary/90 transition-colors"
+              >Découvrir notre technologie</a
+            >
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=Advanced%20pest%20control%20technology%20with%20AI%20integration.%20The%20image%20shows%20a%20digital%20dashboard%20with%20pest%20detection%20analytics%2C%20camera%20feeds%2C%20and%20AI%20processing%20visualizations.%20Clean%2C%20professional%20interface%20with%20data%20charts%20and%20pest%20identification%20markers.%20High-tech%20monitoring%20system%20with%20modern%20design%20elements.&width=600&height=500&seq=2&orientation=landscape"
+              alt="Technologie IA pour le contrôle des nuisibles"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Références</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Découvrez ce que nos clients disent de nos services et de notre
+            approche innovante.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center text-primary mb-4">
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Le système de détection automatique a complètement transformé
+              notre approche de la gestion des nuisibles dans notre chaîne
+              hôtelière. Nous avons réduit les incidents de 85% en seulement six
+              mois."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-gray-500"
+                  ><i class="ri-user-line"></i
+                ></span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Sophie Dupont</h4>
+                <p class="text-gray-500 text-sm">
+                  Directrice Opérations, Groupe Hôtelier Élysée
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center text-primary mb-4">
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "La formation dispensée à nos équipes a été exceptionnelle. Nous
+              sommes maintenant capables d'identifier rapidement les problèmes
+              potentiels et de mettre en œuvre les protocoles appropriés."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-gray-500"
+                  ><i class="ri-user-line"></i
+                ></span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Marc Leblanc</h4>
+                <p class="text-gray-500 text-sm">
+                  Responsable Maintenance, Centre Commercial Rivoli
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center text-primary mb-4">
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-fill"></i
+              ></span>
+              <span class="w-5 h-5 flex items-center justify-center"
+                ><i class="ri-star-half-fill"></i
+              ></span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "L'expertise terrain de l'équipe est impressionnante. Ils ont
+              rapidement identifié la source de notre problème et mis en place
+              une solution durable qui respecte nos engagements
+              environnementaux."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <span
+                  class="w-6 h-6 flex items-center justify-center text-gray-500"
+                  ><i class="ri-user-line"></i
+                ></span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Émilie Moreau</h4>
+                <p class="text-gray-500 text-sm">
+                  Directrice Qualité, Industrie Alimentaire Provence
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            À Propos de Nous
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Vector & Pest Control est votre partenaire de confiance pour des
+            solutions de lutte antiparasitaire innovantes et efficaces. Nous
+            nous engageons à protéger votre environnement avec des technologies
+            de pointe et une expertise inégalée.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Blog & Actualités
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Restez informé des dernières innovations et meilleures pratiques
+            dans le domaine du contrôle des nuisibles.
+          </p>
+        </div>
+        <div
+          id="blog-posts-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Blog posts will be inserted here by JavaScript -->
+        </div>
+        <div class="text-center mt-10">
+          <a
+            href="blog.html"
+            class="border border-primary text-primary px-6 py-3 rounded-button whitespace-nowrap inline-block hover:bg-primary/10 transition-colors"
+            >Voir tous les articles</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary/10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Prêt à révolutionner votre approche du contrôle des nuisibles ?
+          </h2>
+          <p class="text-gray-600 mb-8 text-lg">
+            Rejoignez nos clients satisfaits et découvrez comment notre
+            technologie IA peut transformer votre stratégie de gestion des
+            nuisibles.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#"
+              class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap text-center hover:bg-primary/90 transition-colors"
+              >Demander une démonstration</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary px-6 py-3 rounded-button whitespace-nowrap text-center hover:bg-gray-50 transition-colors border border-primary"
+              >Contacter un expert</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-['Pacifico'] mb-6">logo</h3>
+            <p class="text-gray-400 mb-6">
+              Solutions innovantes de contrôle des nuisibles combinant expertise
+              technique et technologies avancées pour des résultats durables.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="w-5 h-5 flex items-center justify-center"
+                  ><i class="ri-facebook-fill"></i
+                ></span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="w-5 h-5 flex items-center justify-center"
+                  ><i class="ri-twitter-x-fill"></i
+                ></span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="w-5 h-5 flex items-center justify-center"
+                  ><i class="ri-linkedin-fill"></i
+                ></span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="w-5 h-5 flex items-center justify-center"
+                  ><i class="ri-instagram-fill"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Liens rapides</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Technologie IA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Assistance technique</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Expertise terrain</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Formation spécialisée</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Automatisation IA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Surveillance continue</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Analyse prédictive</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Contactez-nous</h4>
+            <form class="space-y-4">
+              <input
+                type="text"
+                placeholder="Votre nom"
+                name="name"
+                required
+                class="w-full px-4 py-2 bg-gray-800 rounded-button border border-gray-700 focus:ring-primary focus:border-primary text-white"
+              />
+              <input
+                type="email"
+                placeholder="Votre email"
+                name="email"
+                required
+                class="w-full px-4 py-2 bg-gray-800 rounded-button border border-gray-700 focus:ring-primary focus:border-primary text-white"
+              />
+              <input
+                type="text"
+                placeholder="Sujet"
+                name="subject"
+                required
+                class="w-full px-4 py-2 bg-gray-800 rounded-button border border-gray-700 focus:ring-primary focus:border-primary text-white"
+              />
+              <textarea
+                placeholder="Votre message"
+                name="message"
+                rows="4"
+                required
+                class="w-full px-4 py-2 bg-gray-800 rounded-button border border-gray-700 focus:ring-primary focus:border-primary text-white"
+              ></textarea>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition-colors"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+          <p>&copy; 2025 Vector & Pest Control. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <script id="languageSelector">
+      document.addEventListener("DOMContentLoaded", function () {
+        const languageSwitcher = document.getElementById("languageSwitcher");
+        const languageButton = document.getElementById("languageButton");
+        const languageDropdown = document.getElementById("languageDropdown");
+        const currentLanguage = document.getElementById("currentLanguage");
+        languageButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          languageDropdown.classList.toggle("hidden");
+        });
+        languageDropdown.addEventListener("click", function (e) {
+          if (e.target.tagName === "A") {
+            e.preventDefault();
+            const selectedLang = e.target.getAttribute("data-lang");
+            const selectedText = e.target.textContent;
+            currentLanguage.textContent = selectedText;
+            languageDropdown.classList.add("hidden");
+            const currentUrl = window.location.href;
+            const newUrl = new URL(currentUrl);
+            newUrl.searchParams.set("lang", selectedLang);
+            window.location.href = newUrl.toString();
+          }
+        });
+        document.addEventListener("click", function (e) {
+          if (!languageSwitcher.contains(e.target)) {
+            languageDropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Quote form
+        const quoteForm = document.getElementById("quote-form");
+        if (quoteForm) {
+          quoteForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(quoteForm);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch("http://localhost:3000/api/quote", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              alert("Votre demande de devis a été envoyée avec succès !");
+              quoteForm.reset();
+            } else {
+              alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+          });
+        }
+
+        // Contact form
+        const contactForm = document.querySelector("footer form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = contactForm.querySelector('input[name="name"]').value;
+            const email = contactForm.querySelector(
+              'input[name="email"]'
+            ).value;
+            const subject = contactForm.querySelector(
+              'input[name="subject"]'
+            ).value;
+            const message = contactForm.querySelector(
+              'textarea[name="message"]'
+            ).value;
+
+            const response = await fetch("http://localhost:3000/api/contact", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, subject, message }),
+            });
+
+            if (response.ok) {
+              alert("Votre message a été envoyé avec succès !");
+              contactForm.reset();
+            } else {
+              alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+          });
+        }
+
+        // Fetch and display blog posts
+        const blogPostsContainer = document.getElementById(
+          "blog-posts-container"
+        );
+        if (blogPostsContainer) {
+          fetch("http://localhost:3000/api/posts")
+            .then((response) => response.json())
+            .then(({ posts }) => {
+              posts.slice(0, 3).forEach((post) => {
+                const postElement = document.createElement("div");
+                postElement.className =
+                  "bg-white rounded-lg overflow-hidden shadow-md";
+                postElement.innerHTML = `
+                            <a href="post.html?id=${post.id}">
+                                <img src="${post.image}" alt="${
+                  post.title
+                }" class="w-full h-48 object-cover object-top">
+                            </a>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-gray-500 text-sm">${new Date(
+                                      post.date
+                                    ).toLocaleDateString("fr-FR")}</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3 text-gray-900">
+                                    <a href="post.html?id=${
+                                      post.id
+                                    }" class="hover:text-primary">${
+                  post.title
+                }</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">${post.content.substring(
+                                  0,
+                                  100
+                                )}...</p>
+                                <a href="post.html?id=${
+                                  post.id
+                                }" class="text-primary font-medium flex items-center">
+                                    Lire l'article
+                                    <span class="w-5 h-5 flex items-center justify-center ml-1"><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                            </div>
+                        `;
+                blogPostsContainer.appendChild(postElement);
+              });
+            })
+            .catch((error) => {
+              console.error("Error fetching blog posts:", error);
+              blogPostsContainer.innerHTML =
+                "<p>Impossible de charger les articles de blog.</p>";
+            });
+        }
+      });
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>

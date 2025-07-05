@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "technology": "Technologie IA",
+    "blog": "Blog",
+    "contact": "Contact",
+    "memberArea": "Espace Membre"
+  },
+  "hero": {
+    "title": "Solutions professionnelles de contrôle des nuisibles",
+    "subtitle": "Nous combinons expertise technique et technologies avancées pour offrir des solutions efficaces et durables contre tous types de nuisibles.",
+    "servicePlaceholder": "Choisissez un service",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre email",
+    "phonePlaceholder": "Votre téléphone",
+    "messagePlaceholder": "Votre message (optionnel)",
+    "quoteButton": "Demander un devis"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions complètes et innovantes pour le contrôle des nuisibles, adaptées à vos besoins spécifiques.",
+    "technicalSupport": "Assistance technique",
+    "fieldExpertise": "Expertise terrain",
+    "training": "Formation spécialisée",
+    "automation": "Automatisation IA",
+    "learnMore": "En savoir plus"
+  }
+}
